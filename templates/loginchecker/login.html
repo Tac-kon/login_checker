@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="jp">
+<head>
+    <meta charset="utf-8">
+    <title>This is Server A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="py-2">This is Server A !!</h1>
+        <form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="ログイン">
+        </form>
+    </div>
+</body>
+</html>
